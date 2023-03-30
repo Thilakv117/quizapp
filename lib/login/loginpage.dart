@@ -34,7 +34,6 @@ TextEditingController passwordController=TextEditingController();
               height: 30,
               width: 50,
             ),
-            const Text('UserName'),
              SizedBox(
               width: 300,
               child: TextField(
@@ -61,6 +60,7 @@ TextEditingController passwordController=TextEditingController();
             ElevatedButton(
               onPressed: () {
                 if(phoneNumberController.text=="9999999991"&&passwordController.text=="123456"){
+                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>const HomePage(),));
       
                 }
                 else{
@@ -70,7 +70,6 @@ TextEditingController passwordController=TextEditingController();
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
-                Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomePage(),));
               },
               child:const Text('Login'),
             )
